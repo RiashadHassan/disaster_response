@@ -1,1 +1,6 @@
 env/
+/rest
+
+**/__pycache__/
+__pycache__
+__pycache__/
