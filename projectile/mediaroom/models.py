@@ -5,6 +5,9 @@ from shared.base_model import BaseModelWithUID
 
 from .choices import MediaKindChoices
 
+from disaster.models import DisasterEvent
+from response.models import Response, Aftermath
+
 User = get_user_model()
 
 
@@ -40,6 +43,16 @@ class MediaRoomConnector(BaseModelWithUID):
 
     # Relationship ForeignKey
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+
+    disaster_event = models.ForeignKey(
+        DisasterEvent, on_delete=models.CASCADE, null=True, blank=True
+    )
+    response = models.ForeignKey(
+        Response, on_delete=models.CASCADE, null=True, blank=True
+    )
+    aftermath = models.ForeignKey(
+        Aftermath, on_delete=models.CASCADE, null=True, blank=True
+    )
 
     def __str__(self):
         return f"{self.id} - UID: {self.uid}, Type: {self.type}"

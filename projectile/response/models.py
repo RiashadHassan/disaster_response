@@ -1,3 +1,13 @@
-from django.db import models
+from shared.base_model import BaseModelWithUID
 
-# Create your models here.
+
+class Response(BaseModelWithUID):
+    pass
+
+
+class ResponseConnector(BaseModelWithUID):
+    pass
+
+
+class Aftermath(BaseModelWithUID):
+    pass

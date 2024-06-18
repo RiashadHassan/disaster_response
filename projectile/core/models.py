@@ -7,7 +7,6 @@ from autoslug import AutoSlugField
 from phonenumber_field.modelfields import PhoneNumberField
 
 from shared.base_model import BaseModelWithUID
-
 from .choices import GenderChoices
 from .managers import CustomUserManager
 from .utils import get_slug_full_name

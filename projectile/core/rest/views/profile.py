@@ -21,4 +21,5 @@ class UserDetailView(RetrieveUpdateDestroyAPIView):
 
     def get_object(self):
         user = User.objects.get(pk=self.request.user.pk)
+        # user = User.objects.first()
         return user
