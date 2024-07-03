@@ -4,7 +4,6 @@ from django.db import models
 from shared.base_model import BaseModelWithUID
 
 User = get_user_model()
-from disaster.models import DisasterEvent
 
 
 class Division(BaseModelWithUID):
